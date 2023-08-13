@@ -7,7 +7,7 @@ GROUP=${GROUP:-nogroup}
 mkdir -p ${VOLUME}
 
 getent group ${GROUP} > /dev/null || addgroup ${GROUP}
-getent passwd ${USER} > /dev/null || adduser -D -H -G ${GROUP} ${USER}
+getent passwd ${USER} > /dev/null || adduser --defaults --groups ${GROUP} ${USER}
 chown -R ${USER}:${GROUP} ${VOLUME}
 
 cat <<EOF > /etc/rsyncd.conf
