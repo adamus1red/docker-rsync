@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:12.1-slim
 MAINTAINER David Stefan <stefda@gmail.com>
 
 RUN apt-get update && \
