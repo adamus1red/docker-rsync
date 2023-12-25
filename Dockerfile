@@ -1,4 +1,4 @@
-FROM debian:12.1-slim
+FROM debian:12.4-slim
 MAINTAINER David Stefan <stefda@gmail.com>
 
 RUN apt-get update && \
